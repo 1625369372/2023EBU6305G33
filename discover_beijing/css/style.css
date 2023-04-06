@@ -8,6 +8,7 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    position: relative;
 }
 
 /* Welcome section styles */
@@ -31,6 +32,41 @@ body {
     transform: translateX(-50%);
     color: #fff;
     font-size: 1.2rem;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.arrow {
+    font-family: "Font Awesome 5 Pro", serif;
+    font-weight: 900;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 2rem;
+    animation: bounce 2s infinite;
+}
+
+.beijing-text {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: #fff;
+    font-size: 1.2rem;
+    font-style: italic;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) translateX(-50%);
+    }
+    40% {
+        transform: translateY(-30px) translateX(-50%);
+    }
+    60% {
+        transform: translateY(-15px) translateX(-50%);
+    }
 }
 
 /* Header styles */
@@ -42,7 +78,7 @@ header {
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000
+    z-index: 1000;
 }
 
 header .logo {
@@ -90,25 +126,69 @@ nav ul ul li {
 
 nav ul ul a {
     display: block;
-    padding: 0.5rem 1rem;
-    white-space: nowrap; /* Add this line to prevent wrapping */
+    padding:     0.5rem;
+    line-height: 1.6rem;
 }
 
-
-nav ul ul a:hover {
-    background-color: #555;
+/* Intro section styles */
+#intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem;
+    height: 100vh;
+    position: relative;
 }
 
-/* Main content styles */
-main {
-    padding: 1rem;
-    margin-top: 4rem;
+.intro-text {
+    width: 50%;
 }
 
-section {
-    margin-bottom: 2rem;
-}
-
-section h2 {
+.intro-text h2 {
+    font-size: 2rem;
     margin-bottom: 1rem;
 }
+
+.intro-text p {
+    font-size: 1.2rem;
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+
+.arrow-right {
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #333;
+    font-size: 2rem;
+    animation: arrowRight 2s infinite;
+}
+
+@keyframes arrowRight {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(0) translateY(-50%);
+    }
+    40% {
+        transform: translateX(30px) translateY(-50%);
+    }
+    60% {
+        transform: translateX(15px) translateY(-50%);
+    }
+}
+
+.intro-image {
+    width: 50%;
+    position: relative;
+}
+
+.intro-image img {
+    width: 100%;
+    height: auto;
+}
+
+/* Add your remaining CSS code for the other sections here */
+
+
