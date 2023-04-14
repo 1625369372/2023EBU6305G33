@@ -20,11 +20,13 @@ body {
 
 .welcome-bg {
     background-image: url(https://cdn.pixabay.com/photo/2022/10/11/02/38/temple-of-heaven-7513135_1280.jpg);
+                      
     background-size: contain;
     background-position: right;
     background-repeat: no-repeat;
     background-attachment: local;
     opacity: 0.9;
+    animation: scrollBg 20s linear infinite;
 
 }
 
@@ -42,28 +44,28 @@ body {
 
 .down-arrow {
     position: absolute;
-
     bottom: -0.5rem;
     left: 50%;
     transform: translateX(-50%);
 }
 
 .welcome-text {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    color: #fff;
-    font-size: 1.5rem;
-    font-weight: bold;
+    text-align: left;
+    margin-left: 2rem;
+    margin-top: 0.2rem;
+    color: #000000;
+    font-size: 2rem;
+    left: 20%;
 }
 
 .welcome-title {
-    font-size: 1.5rem;
+    font-size: 4rem;
     text-align: left;
     margin-left: 2rem;
-    margin-top: 2rem;
-    color: #f0f0f0;
+    margin-top: 20rem;
+    color: #000000;
     left: 20%;
+    font-weight: bold;
 }
 
 
@@ -91,6 +93,7 @@ header .logo {
     text-decoration: none;
     font-size: 1.5rem;
     float: left;
+    opacity: 0.9;
 }
 
 nav ul {
@@ -165,6 +168,11 @@ section h2 {
 .intro-text {
     flex-basis: 45%;
     position: relative;
+    text-align: justify;
+}
+
+.intro-media {
+    flex-basis: 45%;
 }
 
 .intro-image {
@@ -186,8 +194,7 @@ section h2 {
 footer {
     background-color: #333;
     color: #ffffff;
-    padding: 0.7rem 0;//
-    font-size: 1rem;
+    padding: 0.7rem 0;
 }
 
 .footer-container {
@@ -200,7 +207,6 @@ footer {
 
 .footer-section {
     flex: 1;
-    min-width: 200px;
     padding: 0 1rem;
 }
 
@@ -226,15 +232,18 @@ footer {
 
 .footer-section p {
     margin-bottom: 0.5rem;
+
 }
 
 .social-icons {
     display: flex;
+   
 }
 
 .social-icons a {
     display: block;
     margin-right: 1rem;
+
 }
 
 .social-icons img {
