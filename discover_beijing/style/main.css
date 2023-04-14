@@ -171,6 +171,12 @@ section h2 {
     text-align: justify;
 }
 
+.intro-text2 {
+    flex-basis: 45%;
+    text-align: right;
+    position: relative;
+}
+
 .intro-media {
     flex-basis: 45%;
 }
