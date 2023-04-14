@@ -17,7 +17,7 @@ body {
     bottom: 2rem;
     left: 50%;
     transform: translateX(-50%);
-    color: #fff;
+    color:darkgrey;
     font-size: 1.5rem;
     opacity: 1;
     transition: opacity 1s;
@@ -137,6 +137,7 @@ section h2 {
 .intro-text {
     flex-basis: 45%;
     position: relative;
+    text-align: justify;
 }
 
 .intro-image {
