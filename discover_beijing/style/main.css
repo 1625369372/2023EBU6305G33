@@ -18,16 +18,36 @@ body {
     overflow: hidden;
 }
 
-.welcome-bg {
-    background-image: url(https://cdn.pixabay.com/photo/2022/10/11/02/38/temple-of-heaven-7513135_1280.jpg);
-                      
-    background-size: contain;
-    background-position: right;
-    background-repeat: no-repeat;
-    background-attachment: local;
-    opacity: 0.9;
-    animation: scrollBg 20s linear infinite;
+@keyframes scrollBg {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -300% 0;
+    }
+}
 
+.welcome-slideshow {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.slide {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.slide:first-child {
+    opacity: 1;
 }
 
 
@@ -49,23 +69,28 @@ body {
     transform: translateX(-50%);
 }
 
-.welcome-text {
-    text-align: left;
-    margin-left: 2rem;
-    margin-top: 0.2rem;
-    color: #000000;
-    font-size: 2rem;
-    left: 20%;
-}
-
 .welcome-title {
     font-size: 4rem;
     text-align: left;
-    margin-left: 2rem;
+    margin-left: 1rem;
     margin-top: 20rem;
     color: #000000;
     left: 20%;
     font-weight: bold;
+    position: absolute;
+    z-index: 1;
+}
+
+.welcome-text {
+    text-align: left;
+    margin-left: 1rem;
+    margin-top: 0.5rem; /* 更改此值以调整文本与标题之间的距离 */
+    color: #000000;
+    font-size: 2rem;
+    left: 20%;
+    position: absolute;
+    z-index: 1;
+    white-space: nowrap; /* 添加此属性以防止文本换行 */
 }
 
 
