@@ -225,3 +225,43 @@ footer {
 .footer-bottom p {
     margin: 0;
 }
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    header .logo {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.2rem;
+        float: left;
+        opacity: 0.9;
+    }
+
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 0 0.7rem;
+        display: block;
+        line-height: 2rem;
+    }
+
+    #intro {
+        flex-direction: column;
+    }
+
+    .intro-text,
+    .intro-image {
+        flex-basis: 100%;
+    }
+
+    .intro-arrow {
+        display: none;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-section {
+        flex: 1 1 100%;
+    }
+}
